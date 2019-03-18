@@ -15,8 +15,7 @@ This is the logic we had:
 
 ## This is how we did it...
 
-1. We created a [script](https://github.com/pleegor/decentrify/blob/master/add_to_filevault.sh) that removed device from Active Directory utilizing service account. Thanks to Bryson Tyrrel for finding a way to [encrypt](https://github.com/brysontyrrell/EncryptedStrings) credentials with JAMF parameters and placed script in Self Service.
-
+1. 1. We created a [script](https://github.com/pleegor/decentrify/blob/master/add_to_filevault.sh) that removed device from Active Directory utilizing service account (thanks to Bryson Tyrrel for finding a way to [encrypt](https://github.com/brysontyrrell/EncryptedStrings) credentials with JAMF parameters) and placed script in Self Service. 
 2. Created JAMF payload that placed another [script](https://github.com/pleegor/decentrify/blob/master/add_to_filevault.sh) credentials to add user to filevault.
 3. Placed a simple script to add newly created user (local account) to filevault on user's device
 4. Created a simple in Self Service that called created script in previous step.
